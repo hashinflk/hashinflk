@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#HASH iNfinite Lk | Visualizing the Infinite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --deep-red: #8B0000;
+            --black: #0A0A0A;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--off-white);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Logo Styling */
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5em;
+        }
+
+        .logo .symbol,
+        .logo .small-caps {
+            font-size: 2rem;
+            color: var(--deep-red);
+        }
+
+        /* Half of title size */
+        .logo .main-text {
+            font-size: 3rem;
+        }
+
+        .logo .half-symbol {
+            font-size: 0.75rem;
+        }
+
+        /* Half of the # size */
+
+        /* Header & Nav */
+        header {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            z-index: 100;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--deep-red);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(124, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/hashinfinite/HASH_iNfinite/refs/heads/main/Hash_hero1.svg"), center/cover;
+        }
+
+        .hero-logo {
+            width: 350px;
+            height: 350px;
+            background: url("https://i.ibb.co/K8mJPkZ/Hash-Logo4hero.png") center/contain no-repeat;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-family: 'Bebas Neue';
+            letter-spacing: 2px;
+        }
+
+        .btn-area {
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            padding: 2rem;
+        }
+
+        .btn-area a {
+            text-decoration: none;
+        }
+
+        .btn-ex {
+            /* Layout Styles */
+            border: none;
+            padding: 15px 60px;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            outline: 1px solid #f5f5f56e;
+            outline-offset: 1px;
+            transition: all ease 5s;
+            background: linear-gradient(-30deg, #7c0000b3, #000000, #7c0000b3, #000000);
+            background-size: 300% 300%;
+
+            /* Constant animation */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Speed up and pop out on hover */
+        .btn-ex:hover {
+            outline-offset: 5px;
+            animation: gradient-flow 5s ease infinite;
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px 11px rgba(218, 49, 49, 0.24);
+        }
+
+        /* The Keyframes that move the background */
+        @keyframes gradient-flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Portfolio */
+        .container {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .filter-buttons {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--deep-red);
+            color: var(--white);
+            padding: 8px 20px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--deep-red);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            height: 250px;
+            display: block;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 0, 0, 0.8);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .portfolio-item:hover .overlay {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Booking CTA */
+        .booking-section {
+            background: var(--off-white);
+            color: var(--black);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .btn-booking {
+            background: var(--deep-red);
+            color: var(--white);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-booking:hover {
+            outline: 2px solid var(--deep-red);
+             outline-offset: 5px;
+             background: var(--deep-red);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Lightbox (Preview) */
+        #lightbox {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 3px solid var(--white);
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 20px;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Contact Footer */
+        footer {
+            padding: 4rem 2rem;
+            background: #000;
+            border-top: 1px solid var(--deep-red);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        h4 {
+            color: var(--deep-red);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Back to top */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--deep-red);
+            color: white;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 18px;
+            transition: opacity 0.7s;
+        }
+
+        #backToTop i {
+            font-size: 18px;
+            color: var(--white);
+        }
+
+        #backToTop:hover {
+            background-color: #7c0000;
+        }
+    </style>
+</head>
+
+<body id="home">
+
+    <header>
+        <a href="#home" class="logo">
+
+            <span class="main-text"><span class="symbol">#</span>HASH</span>
+            <span class="symbol">iNfinite</span>
+            <span class="symbol">Lk</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#portfolio">Work</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking"
+                style="color: var(--deep-red); outline: solid 1px #f5f5f56e; padding: 5px 10px; border-radius: 10px;">Book
+                Now</a>
+        </nav>
+    </header>
+
+    <button id="backToTop" class="backtop" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <section class="hero">
+        <div class="hero-logo"></div>
+        <!-- <h1>Visualizing the infinite</h1> -->
+    </section>
+
+    <div class="btn-area" id="btn-area">
+        <a href="#btn-area">
+            <div class="btn-ex">EXPLORE</div>
+        </a>
+    </div>
+
+    <section class="container" id="portfolio">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+            <button class="filter-btn" onclick="filterSelection('logos')">Logos</button>
+            <button class="filter-btn" onclick="filterSelection('books')">Book Covers</button>
+            <button class="filter-btn" onclick="filterSelection('social')">Facebook Campaigns</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item logos" onclick="openLightbox(0)">
+                <img src="./Media_logo.jpg" alt="Logo">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(1)">
+                <img src="https://i.ibb.co/jPjJn8dj/Unit-1n2-4.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item logos" onclick="openLightbox(2)">
+                <img src="https://i.ibb.co/gb5yL4vy/Hash-Logo.jpg" alt="Logo">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item social" onclick="openLightbox(3)">
+                <img src="https://i.ibb.co/PvhkrbqM/YD-Poster.jpg" alt="Campaign">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item social" onclick="openLightbox(4)">
+                <img src="https://i.ibb.co/hFr4m07s/Asanka-Sir-01.jpg" alt="Campaign">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item logos" onclick="openLightbox(5)">
+                <img src="https://i.ibb.co/PvX2jZnF/century-logo-pmv.jpg" alt="Logo">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(6)">
+                <img src="https://i.ibb.co/whF5mjST/Unit-1n2.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(7)">
+                <img src="https://i.ibb.co/dwWWcr3L/Unit-3.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(8)">
+                <img src="https://i.ibb.co/vvd56mYF/Unit-4-6.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(9)">
+                <img src="https://i.ibb.co/DP5Fr6kJ/Unit-4.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+            <div class="portfolio-item books" onclick="openLightbox(10)">
+                <img src="https://i.ibb.co/Xrt91ypw/Unit-6.jpg" alt="Book Cover">
+                <div class="overlay">View Project</div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <h2>Ready to start your project?</h2>
+        <p>Click below to chat with us on WhatsApp and get a quote.</p>
+        <a href="https://wa.me/message/K6P3EEVAY2AJK1" class="btn-booking">SEND MESSAGE</a>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h4>Contact Info</h4>
+                <p>Email: hashinfinite.lk@gmail.com</p>
+                <p>Phone: +94 72 422 9837</p>
+                <p>WhatsApp: +94 72 422 9837</p>
+            </div>
+            <div>
+                <h4>Our Studio</h4>
+                <p>Polegoda, Mahagama,</p>
+                <p>Western Province, Sri Lanka.</p>
+                <p>12210</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <p>Facebook | Instagram | Pinterest</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" src="">
+        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script>
+        // Portfolio Filter
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("portfolio-item");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
+            }
+        }
+
+        // Lightbox Logic
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.portfolio-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            lightbox.style.display = "flex";
+            lightboxImg.src = images[currentImageIndex].src;
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+        }
+
+        function changeImage(n) {
+            currentImageIndex += n;
+            if (currentImageIndex >= images.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+            lightboxImg.src = images[currentImageIndex].src;
+        }
+
+        // Close on click outside image
+        lightbox.onclick = function (e) {
+            if (e.target !== lightboxImg && e.target.className !== 'nav-btn') {
+                closeLightbox();
+            }
+        }
+    </script>
+    <script>
+        let mybutton = document.getElementById("backToTop");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+</body>
+
+</html>
