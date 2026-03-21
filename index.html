@@ -20,12 +20,12 @@
     <meta name="twitter:image" content="https://i.ibb.co/q30cJQ4d/Hash-og-image.jpg">
 
     <!-- Cookie Hub -->
-    <!-- <script src="https://cdn.cookiehub.eu/c2/b12873bd.js"></script>
+    <script src="https://cdn.cookiehub.eu/c2/b12873bd.js"></script>
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {var cpm = {};
     window.cookiehub.load(cpm);
     });
-    </script> -->
+    </script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -308,7 +308,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 8px;
-            cursor: pointer;
+            cursor: zoom-in;
             height: 250px;
             display: block;
         }
@@ -611,6 +611,95 @@
         #backToTop:hover {
             background-color: #7c0000;
         }
+
+
+        /* Modal (Suspension Notice) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.096);
+            backdrop-filter: blur(30px) saturate(150%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: #000000ad;
+            backdrop-filter: blur(50px) saturate(0);
+            padding: 40px;
+            width: 70vw;
+            text-align: center;
+            border: 1px solid var(--deep-red);
+            border-radius: 20px;
+            position: relative;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        h2 {
+            color: var(--deep-red);
+            margin-top: 0;
+        }
+
+        p {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-section {
+            background: #ff000011;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid var(--deep-red);
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+            /* Easier to read contact info when left-aligned */
+            font-size: 0.9em;
+        }
+
+        /* Signature Styling */
+        .signature-block {
+            text-align: right;
+            margin-top: 50px;
+            padding-right: 10px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            display: block;
+            color: #ffffff;
+        }
+
+        .signature-position {
+            font-style: italic;
+            font-size: 0.85em;
+            color: #666;
+            display: block;
+        }
+
+        .btn-close-modal {
+            background: var(--deep-red);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--deep-red);
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -633,12 +722,36 @@
             <a href="#booking" class="nav_book">Book Now</a>
         </nav>
     </header>
+
+    <div id="suspensionModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Service Suspension Notice</h2>
+            <p>Please be advised that our services have been suspended for an indefinite period of time. We apologize
+                for any inconvenience this may cause.</p>
+
+            <div class="contact-section">
+                <p><strong>Essential Service Support:</strong><br>
+                    WhatsApp: <a href="https://wa.me/+94755982430" target="_blank">Chat with us on WhatsApp</a><br>
+                    Direct: <a href="tel:+94724229837">+94 72 422 9837</a></p>
+            </div>
+
+            <div class="signature-block">
+                <span class="signature-name">Kasun Harshana Premalal</span>
+                <span class="signature-position">Manager</span>
+            </div>
+
+            <div class="button-group">
+            <button class="btn-close-modal" onclick="closeModal()">Close & View Gallery</button>
+            </div>
+        </div>
+    </div>
+
+
     <button id="backToTop" class="backtop" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
     <section class="hero">
         <div class="gradient-filter"></div>
         <div class="hero-logo"></div>
-        <!-- <h1>Visualizing the infinite</h1> -->
     </section>
 
     <div class="btn-area" id="btn-area">
@@ -936,6 +1049,12 @@
             });
         });
     </script>
+<script>
+        // Modal Logic
+        function closeModal() {
+            document.getElementById('suspensionModal').style.display = 'none';
+        }
+</script>
 
 </body>
 
