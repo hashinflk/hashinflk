@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#HASH iNfinite Lk | Visualizing the Infinite</title>
     <link rel="icon" type="image/x-icon" href="./Hash_Icon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hashinflk.github.io/hashinflk/">
     <meta property="og:title" content="#HASH iNfinite Lk | Graphic Design Studio">
@@ -37,1025 +34,254 @@
 
         gtag('config', 'G-24WJCEDCTN');
     </script>
-
-    <style>
-        :root {
-            --deep-red: #c00000;
-            --black: rgb(10, 10, 10);
-            --white: rgb(255, 255, 255);
-            --off-white: #F5F5F5;
-        }
-
-        section {
-            scroll-margin-top: 100px;
-        }
-
-        @media (max-width: 768px) {
-            section {
-                scroll-margin-top: 150px;
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--black);
-            color: var(--off-white);
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Logo Styling */
-        .logo {
-            font-family: 'Bebas Neue', cursive;
-            color: var(--white);
-            text-decoration: none;
-            display: flex;
-            align-items: baseline;
-            gap: 0.5em;
-        }
-
-        .logo .symbol,
-        .logo .small-caps {
-            font-size: 2rem;
-            color: var(--deep-red);
-        }
-
-        /* Half of title size */
-        .logo .main-text {
-            font-size: 3rem;
-        }
-
-        .logo .half-symbol {
-            font-size: 0.75rem;
-        }
-
-
-        /* Header & Nav */
-        header {
-            padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
-            position: sticky;
-            top: 0;
-            background: rgba(10, 10, 10, 0.95);
-            z-index: 100;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav_link {
-            color: var(--white);
-        }
-
-        .nav_book {
-            color: var(--white);
-            padding: 5px 10px;
-            border-radius: 10px;
-            background-color: var(--deep-red);
-        }
-
-        .nav_book:hover {
-            background-color: var(--white);
-            color: var(--deep-red);
-        }
-
-        .nav_link:hover {
-            color: var(--deep-red);
-        }
-
-        /* Hide toggle on desktop */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            color: var(--white);
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 1.5rem;
-                flex-wrap: wrap;
-            }
-
-            .logo {
-                margin: 0;
-                /* Removes any default centering margins */
-            }
-
-            .menu-toggle {
-                display: block;
-                order: 2;
-                /* Ensures it stays to the right of the logo */
-            }
-
-            .nav-links {
-                display: none;
-                order: 3;
-                /* Places the menu items below the logo/toggle row */
-                width: 100%;
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem 0;
-                line-height: 3;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(10, 10, 10, 0.349) 0%, rgb(10, 10, 10) 100%), url("https://raw.githubusercontent.com/hashinflk/hashinflk/refs/heads/main/Hash_hero2.svg");
-            background-size: cover;
-        }
-
-        .hero-logo {
-            width: 18.22vw;
-            height: 32.40vh;
-            background: url("https://i.ibb.co/K8mJPkZ/Hash-Logo4hero.png") center/contain no-repeat;
-            margin-bottom: 1.5rem;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-family: 'Bebas Neue';
-            letter-spacing: 2px;
-        }
-
-        .btn-area {
-            display: flex;
-            justify-content: center;
-            background-color: var(--black);
-            padding: 2rem;
-        }
-
-        .btn-area a {
-            text-decoration: none;
-        }
-
-        .btn-ex {
-            /* Layout Styles */
-            border: none;
-            padding: 15px 60px;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            outline: none;
-            outline: 1px solid #f5f5f56e;
-            outline-offset: 1px;
-            transition: all ease 5s;
-            background: linear-gradient(-30deg, #7c0000b3, #000000, #7c0000b3, #000000);
-            background-size: 300% 300%;
-
-            /* Constant animation */
-            transition: transform 0.5s ease, box-shadow 0.5s ease, outline-offset 0.5s ease;
-        }
-
-        /* Speed up and pop out on hover */
-        .btn-ex:hover {
-            outline-offset: 5px;
-            animation: gradient-flow 5s ease infinite;
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px 11px rgba(218, 49, 49, 0.24);
-        }
-
-        /* The Keyframes that move the background */
-        @keyframes gradient-flow {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Portfolio */
-        .container {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .container h2 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 3rem;
-            color: var(--white);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
-        .filter-buttons {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid var(--deep-red);
-            color: var(--white);
-            padding: 8px 20px;
-            cursor: pointer;
-            margin: 5px;
-            transition: 0.3s;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--deep-red);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            cursor: zoom-in;
-            height: 250px;
-            display: block;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(139, 0, 0, 0.8);
-            overflow: hidden;
-            width: 100%;
-            height: 0;
-            transition: .5s ease;
-        }
-
-        .portfolio-item:hover .overlay {
-            height: 20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Services Section */
-        .services {
-            background-color: var(--off-white);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 3rem;
-            color: var(--black);
-            margin-bottom: 3rem;
-            letter-spacing: 2px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: #151515;
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            border: 1px solid #333;
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service-card:hover {
-            border-color: var(--deep-red);
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.1);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--deep-red);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            color: var(--off-white);
-        }
-
-        /* Booking CTA */
-        .booking-section {
-            background: var(--off-white);
-            color: var(--black);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .btn-booking {
-            background: var(--deep-red);
-            color: var(--white);
-            padding: 15px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn-booking:hover {
-            outline: 2px solid var(--deep-red);
-            outline-offset: 5px;
-            background: var(--deep-red);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Lightbox (Preview) */
-        #lightbox {
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #lightbox img {
-            max-width: 80%;
-            max-height: 80%;
-            border: 3px solid var(--white);
-        }
-
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 20px;
-        }
-
-        .prev {
-            left: 20px;
-        }
-
-        .next {
-            right: 20px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* FAQ Section */
-        .qa-section {
-            background-color: var(--black);
-            padding: 4rem 2rem;
-        }
-
-        .qa-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .qa-section h2 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 3rem;
-            text-align: center;
-            color: var(--white);
-            margin-bottom: 3rem;
-            letter-spacing: 2px;
-        }
-
-        .qa-item {
-            margin-bottom: 1rem;
-            border: 1px solid #333;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .qa-item:hover {
-            border-color: var(--deep-red);
-        }
-
-        .qa-question {
-            width: 100%;
-            padding: 20px;
-            background: #151515;
-            color: var(--white);
-            text-align: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .qa-question i {
-            color: var(--deep-red);
-            transition: transform 0.3s;
-        }
-
-        .qa-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: var(--black);
-        }
-
-        .qa-answer p {
-            padding: 20px;
-            color: #ccc;
-            font-size: 0.95rem;
-            border-top: 1px solid #333;
-        }
-
-        .qa-item.active .qa-answer {
-            max-height: 200px;
-            /* Adjust based on content length */
-        }
-
-        .qa-item.active .qa-question i {
-            transform: rotate(180deg);
-        }
-
-        /* Contact Footer */
-        footer {
-            padding: 4rem 2rem;
-            background: #000;
-            border-top: 1px solid var(--deep-red);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        h4 {
-            color: var(--deep-red);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 768px) {
-            .hero-logo {
-                width: 200px;
-                height: 200px;
-            }
-
-            .hero {
-                background: linear-gradient(rgba(184, 3, 3, 0.349) 0%, rgb(10, 10, 10) 100%);
-            }
-        }
-
-        /* Back to top */
-        #backToTop {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 99;
-            border: none;
-            outline: none;
-            background-color: var(--deep-red);
-            color: white;
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 18px;
-            transition: opacity 0.7s;
-        }
-
-        #backToTop i {
-            font-size: 18px;
-            color: var(--white);
-        }
-
-        #backToTop:hover {
-            background-color: #7c0000;
-        }
-
-
-        /* Modal (Suspension Notice) */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.096);
-            backdrop-filter: blur(30px) saturate(150%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .modal-content {
-            background: #000000ad;
-            backdrop-filter: blur(50px) saturate(0);
-            padding: 40px;
-            width: 70vw;
-            text-align: center;
-            border: 1px solid var(--deep-red);
-            border-radius: 20px;
-            position: relative;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-
-        h2 {
-            color: var(--deep-red);
-            margin-top: 0;
-        }
-
-        p {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .contact-section {
-            background: #ff000011;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 4px solid var(--deep-red);
-            text-align: left;
-            border-radius: 0 10px 10px 0;
-            /* Easier to read contact info when left-aligned */
-            font-size: 0.9em;
-        }
-
-        /* Signature Styling */
-        .signature-block {
-            text-align: right;
-            margin-top: 50px;
-            padding-right: 10px;
-        }
-
-        .signature-name {
-            font-weight: bold;
-            display: block;
-            color: #ffffff;
-        }
-
-        .signature-position {
-            font-style: italic;
-            font-size: 0.85em;
-            color: #666;
-            display: block;
-        }
-
-        .btn-close-modal {
-            background: var(--deep-red);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        a {
-            color: var(--deep-red);
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    
+    <meta name="description" content="Creative visual storytelling, branding, and professional design services by Hash iNfinite Lk.">
+    
+    <!-- Google Fonts: Poppins & Bebas Neue -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<body id="home">
-
-    <header>
+    <!-- Navigation Bar (Updated from index-sample.html) -->
+    <header id="navbar" class="navbar">
         <a href="#home" class="logo">
             <span class="main-text"><span class="symbol">#</span>HASH</span>
             <span class="symbol">iNfinite</span>
             <span class="symbol">Lk</span>
         </a>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fa fa-bars"></i>
-        </div>
+        
         <nav class="nav-links" id="nav-menu">
-            <a href="#portfolio" class="nav_link">Visuals</a>
+            <a href="#home" class="nav_link">Home</a>
             <a href="#services" class="nav_link">Services</a>
             <a href="#faq" class="nav_link">FAQ</a>
             <a href="#contact" class="nav_link">Contact</a>
-            <a href="#booking" class="nav_book">Book Now</a>
+            <a href="https://wa.me/message/K6P3EEVAY2AJK1" class="nav_book" target="_blank">Book Now</a>
         </nav>
-    </header>
 
-    <!-- <div id="suspensionModal" class="modal-overlay">
-        <div class="modal-content">
-            <h2>Service Suspension Notice</h2>
-            <p>Please be advised that our services have been suspended for an indefinite period of time. We apologize
-                for any inconvenience this may cause.</p>
-
-            <div class="contact-section">
-                <p><strong>Essential Service Support:</strong><br>
-                    WhatsApp: <a href="https://wa.me/+94755982430" target="_blank">Chat with us on WhatsApp</a><br>
-                    Direct: <a href="tel:+94724229837">+94 72 422 9837</a></p>
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <div class="theme-toggle" id="theme-toggle" title="Switch Day/Night Mode">
+                <i class="fa-solid fa-sun" id="theme-icon"></i>
             </div>
-
-            <div class="signature-block">
-                <span class="signature-name">Kasun Harshana Premalal</span>
-                <span class="signature-position">Manager</span>
-            </div>
-
-            <div class="button-group">
-            <button class="btn-close-modal" onclick="closeModal()">Close & View Gallery</button>
+            <div class="menu-toggle hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
             </div>
         </div>
-    </div> -->
-
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="close-btn" id="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#services" class="mobile-link">Services</a></li>
+                <li><a href="#faq" class="mobile-link">FAQ</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+                <li><a href="https://wa.me/message/K6P3EEVAY2AJK1" class="mobile-link cta" target="_blank">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
 
     <button id="backToTop" class="backtop" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-    <section class="hero">
-        <div class="gradient-filter"></div>
-        <div class="hero-logo"></div>
-    </section>
 
-    <div class="btn-area" id="btn-area">
-        <a href="#btn-area">
-            <div class="btn-ex">EXPLORE</div>
-        </a>
-    </div>
-
-    <section class="container" id="portfolio">
-        <h2>OUR VISUALS</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn active" onclick="filterSelection('all')">All</button>
-            <button class="filter-btn" onclick="filterSelection('logos')">Logos</button>
-            <button class="filter-btn" onclick="filterSelection('books')">Book Covers</button>
-            <button class="filter-btn" onclick="filterSelection('social')">Facebook Campaigns</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
         </div>
-
-        <div class="portfolio-grid">
-            <div class="portfolio-item logos" onclick="openLightbox(0)">
-                <img src="https://i.ibb.co/xtMzbmGN/Media-logo.jpg" alt="Logo">
-                <div class="overlay">View Project</div>
-            </div>
-            <div class="portfolio-item books" onclick="openLightbox(1)">
-                <img src="https://i.ibb.co/whF5mjST/Unit-1n2.jpg" alt="Book Cover">
-                <div class="overlay">View Project</div>
-            </div>
-            <div class="portfolio-item logos" onclick="openLightbox(2)">
-                <img src="https://i.ibb.co/gb5yL4vy/Hash-Logo.jpg" alt="Logo">
-                <div class="overlay">View Project</div>
-            </div>
-            <div class="portfolio-item social" onclick="openLightbox(4)">
-                <img src="https://i.ibb.co/hFr4m07s/Asanka-Sir-01.jpg" alt="Campaign">
-                <div class="overlay">View Project</div>
-            </div>
-            <div class="portfolio-item logos" onclick="openLightbox(5)">
-                <img src="https://i.ibb.co/PvX2jZnF/century-logo-pmv.jpg" alt="Logo">
-                <div class="overlay">View Project</div>
+        <div class="glass-overlay"></div>
+        
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="hero-logo" data-aos="fade-down" data-aos-delay="200"></div>
+            <h1 class="company-name" data-aos="fade-up" data-aos-delay="400">Visualizing the Infinite</h1>
+            <p class="slogan" data-aos="fade-up" data-aos-delay="600">Creative visual storytelling, branding, and professional design services.</p>
+            
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+                <span>EXPLORE</span>
+                <i class="fa-solid fa-chevron-down bounce"></i>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-pen-nib"></i>
-                <h3>Branding & Logos</h3>
-                <p>Crafting unique visual identities and professional logos for studios and businesses.</p>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-down">
+                <h2>Our Services</h2>
+                <div class="divider"></div>
             </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Branding & Logos</h3>
+                    <p>Crafting unique visual identities and professional logos for studios and businesses.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-icon"><i class="fa-solid fa-book"></i></div>
+                    <h3>Book Cover Design</h3>
+                    <p>Turning stories into visual masterpieces with professional, eye-catching layouts.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>CV/Resume Design</h3>
+                    <p>Modern, ATS-friendly layouts tailored to highlight your career achievements and skills.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h3>Invitation Design</h3>
+                    <p>Custom digital and print-ready invitations for weddings, parties, and corporate events.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fa-solid fa-image"></i></div>
+                    <h3>Banner Design</h3>
+                    <p>High-impact digital designs for events and school celebrations. (Design Only)</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-icon"><i class="fa-solid fa-align-left"></i></div>
+                    <h3>Type Setting</h3>
+                    <p>Professional document formatting, CV creation, and precise text layouts for official use.</p>
+                </div>
 
-            <div class="service-card">
-                <i class="fa-solid fa-book-open"></i>
-                <h3>Book Cover Design</h3>
-                <p>Turning stories into visual masterpieces with professional, eye-catching layouts.</p>
-            </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                    <h3>Birthday Photos</h3>
+                    <p>Creative photo manipulation and enhancement for memorable birthday keepsakes. (Editing Only)</p>
+                </div>
 
-            <div class="service-card">
-                <i class="fa-solid fa-file-invoice"></i>
-                <h3>CV/Resume Design</h3>
-                <p>Modern, ATS-friendly layouts tailored to highlight your career achievements and skills.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <h3>Invitation Design</h3>
-                <p>Custom digital and print-ready invitations for weddings, parties, and corporate events.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-scroll"></i>
-                <h3>Banner Design</h3>
-                <p>High-impact digital designs for events and school celebrations. <strong>(Design Only)</strong></p>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-keyboard"></i>
-                <h3>Type Setting</h3>
-                <p>Professional document formatting, CV creation, and precise text layouts for official use.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-cake-candles"></i>
-                <h3>Birthday Photos</h3>
-                <p>Creative photo manipulation and enhancement for memorable birthday keepsakes. <strong>(Editing
-                        Only)</strong></p>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-share-nodes"></i>
-                <h3>Social Media Campaigns</h3>
-                <p>Strategic visual content for Facebook and Instagram to grow your digital presence.</p>
-            </div>
-        </div>
-
-        <p id="booking" style="margin-top: 2rem; color: var(--deep-red); font-style: italic; font-size: 0.9rem;">
-            * Please note: We provide digital design files only. Printing and framing services are not included.
-        </p>
-    </section>
-
-
-    <section class="booking-section">
-        <h2>Ready to start your project?</h2>
-        <p>Click below to chat with us on WhatsApp and get a quote.</p>
-        <a href="https://wa.me/message/K6P3EEVAY2AJK1" class="btn-booking">SEND MESSAGE</a>
-    </section>
-
-    <section class="qa-section" id="faq">
-        <div class="qa-container">
-            <h2>Common Questions</h2>
-
-            <div class="qa-item">
-                <button class="qa-question">Do you offer printing and framing? <i
-                        class="fa fa-chevron-down"></i></button>
-                <div class="qa-answer">
-                    <p>No, #HASH iNfinite Lk is a digital design studio. We provide high-quality design files for
-                        banners, birthday photos, and documents, but we do not handle physical printing or framing.</p>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+                    <h3>Social Media</h3>
+                    <p>Strategic visual content for Facebook and Instagram to grow your digital presence.</p>
                 </div>
             </div>
 
-            <div class="qa-item">
-                <button class="qa-question">What files will I receive for Banner Designs? <i
-                        class="fa fa-chevron-down"></i></button>
-                <div class="qa-answer">
-                    <p>You will receive print-ready high-resolution files (PDF, JPEG, or PNG) optimized for the specific
-                        dimensions you require for your event.</p>
-                </div>
+            <div class="service-note" data-aos="fade-up" data-aos-delay="500">
+                <p><strong>* Please note:</strong> We provide digital design files only. Printing and framing services are not included.</p>
             </div>
-
-            <div class="qa-item">
-                <button class="qa-question">How long does a Type Setting project take? <i
-                        class="fa fa-chevron-down"></i></button>
-                <div class="qa-answer">
-                    <p>Standard documents and CVs are usually completed within 24–48 hours, depending on the complexity
-                        of the layout and the amount of text.</p>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <button class="qa-question">Can you edit old or damaged Birthday Photos? <i
-                        class="fa fa-chevron-down"></i></button>
-                <div class="qa-answer">
-                    <p>Yes! We specialize in photo manipulation and enhancement to make your birthday visuals look
-                        professional and vibrant.</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
+    <!-- Order Now Section -->
+    <section class="order-now" id="booking" data-aos="zoom-in-up">
+        <div class="container order-content">
+            <h2>Ready to start your project?</h2>
+            <p>Click below to chat with us on WhatsApp and get a quote.</p>
+            <a href="https://wa.me/message/K6P3EEVAY2AJK1" target="_blank" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> SEND MESSAGE
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-down">
+                <h2>Common Questions</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Do you handle physical printing and framing?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, #HASH iNfinite Lk is a digital design studio. We provide high-quality design files for banners, birthday photos, and documents, but we do not handle physical printing or framing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>What file formats will I receive?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You will receive print-ready high-resolution files (PDF, JPEG, or PNG) optimized for the specific dimensions you require for your event.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>How long does it take for CVs and documents?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard documents and CVs are usually completed within 24–48 hours, depending on the complexity of the layout and the amount of text.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Do you edit and manipulate photos?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We specialize in photo manipulation and enhancement to make your birthday visuals or other photos look professional and vibrant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer id="contact">
-        <div class="footer-grid">
-            <div>
-                <h4>Contact Info</h4>
-                <p>Email: hashinfinite.lk@gmail.com</p>
-                <p>Phone: +94 72 422 9837</p>
-                <p>WhatsApp: +94 72 422 9837</p>
+        <div class="container footer-content">
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="footer-logo">#HASH iNfinite Lk</h3>
+                <p>Creative visual storytelling, branding, and professional design services tailored to your needs.</p>
             </div>
-            <div>
-                <h4>Our Studio</h4>
+            
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h3>Our Studio</h3>
                 <p>Polegoda, Mahagama,</p>
-                <p>Western Province, Sri Lanka.</p>
-                <p>12210</p>
+                <p>Western Province,</p>
+                <p>Sri Lanka. 12210</p>
+                
+                <h3 style="margin-top:20px;">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
             </div>
-            <div>
-                <h4>Follow Us</h4>
-                <p>Facebook | Instagram | Pinterest</p>
+            
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="300">
+                <h3>Contact Info</h3>
+                <p><i class="fa-solid fa-phone"></i> +94 72 422 9837</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +94 72 422 9837</p>
+                <p><i class="fa-solid fa-envelope"></i> hashinfinite.lk@gmail.com</p>
             </div>
         </div>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hash iNfinite Lk. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <div id="lightbox">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
-        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
-        <img id="lightbox-img" src="">
-        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
-    </div>
-
-    <script>
-        // Portfolio Filter
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("portfolio-item");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-                if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
-            }
-        }
-
-        // Lightbox Logic
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('.portfolio-item img');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            lightbox.style.display = "flex";
-            lightboxImg.src = images[currentImageIndex].src;
-        }
-
-        function closeLightbox() {
-            lightbox.style.display = "none";
-        }
-
-        function changeImage(n) {
-            currentImageIndex += n;
-            if (currentImageIndex >= images.length) currentImageIndex = 0;
-            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
-            lightboxImg.src = images[currentImageIndex].src;
-        }
-
-        // Close on click outside image
-        lightbox.onclick = function (e) {
-            if (e.target !== lightboxImg && e.target.className !== 'nav-btn') {
-                closeLightbox();
-            }
-        }
-    </script>
-    <script>
-        let mybutton = document.getElementById("backToTop");
-
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        mybutton.onclick = function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-    </script>
-    <script>
-        // Define dataLayer and the gtag function.
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-
-        // Set default consent to 'denied' as a placeholder
-        // Determine actual values based on your own requirements
-        gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'denied'
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const accordionBtns = document.querySelectorAll(".qa-question");
-
-            accordionBtns.forEach((btn) => {
-                btn.addEventListener("click", function (e) {
-                    e.preventDefault(); // Prevents any page jumping
-                    const item = this.parentElement;
-
-                    // Toggle the active class
-                    item.classList.toggle("active");
-
-                    // Optional: Smoothly close others when one is opened
-                    document.querySelectorAll(".qa-item").forEach((otherItem) => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove("active");
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        // Toggle menu when clicking the hamburger icon
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            // Optional: change icon to an 'X' when open
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Hide menu when any link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-    </script>
-<script>
-        // Modal Logic
-        function closeModal() {
-            document.getElementById('suspensionModal').style.display = 'none';
-        }
-</script>
-
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
-
 </html>
