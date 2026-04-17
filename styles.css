@@ -11,7 +11,7 @@
     --icon-bg: #7a1cac26;
     --border-color: #ad49e140;
     --nav-height: 80px;
-    --hero-logo-url: url('./logo-white.svg');
+    --hero-logo-url: url('./logo-white.png');
 }
 
 :root[data-theme="light"] {
@@ -26,7 +26,7 @@
     --icon-bg: #7a1cac1a;
     --border-color: #7a1cac26;
     --nav-height: 80px;
-    --hero-logo-url: url('./logo-purple.svg');
+    --hero-logo-url: url('./logo-purple.png');
 }
 
 /* --- Base Reset --- */
