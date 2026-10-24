@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="logos/main-logo.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Studio HASH iNf Lk™ — Hashing Ideas into Infinite Possibilities</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Rajdhani:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <canvas id="sky"></canvas>
+
+  <nav>
+    <a href="#hero" class="lg"><img src="logos/main-logo.svg" alt="" width="30" height="16">HASH iNf</a>
+    <button id="burger" aria-label="Menu">☰</button>
+    <ul id="menu">
+      <li><a class="l" href="#brands">Sub-brands</a></li>
+      <li><a class="l" href="#services">Services</a></li>
+      <li><a class="l" href="#reviews">Reviews</a></li>
+      <li><a class="l" href="#team">Team</a></li>
+      <li><a class="l" href="#faq">FAQ</a></li>
+      <li><a class="l" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="hero">
+    <div class="wrap">
+      <!-- Replace with <img src="main-logo.png"> -->
+      <img class="mark" src="logos/main-logo.svg" alt="Studio HASH iNf Lk logo">
+      <h1 class="grad">Studio HASH <span class="lo">i</span>N<span class="lo">f</span> Lk<sup>™</sup></h1>
+      <div class="tag">Hashing Ideas into Infinite Possibilities</div>
+      <div class="head">Design. Code. Capture. Compose — one studio, four infinite crafts.</div>
+      <p class="lead">From graphics and software to photography, video and music, Studio HASH iNf Lk turns raw ideas
+        into polished digital experiences, launched from cyberspace to wherever you are.</p>
+      <a class="btn" href="#services" data-open="svc">Explore Services</a> <a class="btn ghost" href="#contact">Start a
+        Project</a>
+      <div class="chips">
+        <span class="chip" data-open="svc" data-tab="0">iNfpirex™</span><span class="chip" data-open="svc"
+          data-tab="1">iNfyzora™</span><span class="chip" data-open="svc" data-tab="2">iNframex™</span><span
+          class="chip" data-open="svc" data-tab="3">iNfysona™</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="brands">
+      <div class="wrap">
+        <div class="eyebrow">Our Universe</div>
+        <h2>Four Sub-brands. <span class="grad">One Infinity.</span></h2>
+        <div class="grid brands" id="brandGrid"></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap" style="text-align:center">
+        <div class="eyebrow">What We Do</div>
+        <h2>Services</h2>
+        <p class="lead">Step inside each sub-brand to browse artwork, software, galleries and place your request.</p>
+        <button class="btn" data-open="svc" data-tab="0">Open Services Hub</button>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap">
+        <div class="eyebrow">Voices from Orbit</div>
+        <h2>Review &amp; Feedback</h2>
+        <div class="reviews-container">
+          <div class="review-row marquee-right">
+            <div class="review-track" id="rvGridTop"></div>
+          </div>
+          <div class="review-row marquee-left">
+            <div class="review-track" id="rvGridBottom"></div>
+          </div>
+        </div>
+        <div class="reviews">
+          <form class="f" id="rvForm">
+            <h3 style="font-size:1.8rem">Leave your feedback</h3>
+            <select id="rvB">
+              <option>iNfpirex™</option>
+              <option>iNfyzora™</option>
+              <option>iNframex™</option>
+              <option>iNfysona™</option>
+            </select>
+            <input id="rvN" placeholder="Your name" required maxlength="40">
+            <select id="rvS">
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★☆</option>
+              <option value="3">★★★☆☆</option>
+              <option value="2">★★☆☆☆</option>
+              <option value="1">★☆☆☆☆</option>
+            </select>
+            <textarea id="rvC" rows="3" placeholder="Your comment" required maxlength="240"></textarea>
+            <button class="btn" type="submit">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="wrap">
+        <div class="eyebrow">The Crew</div>
+        <h2>Our Team</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="ico">◎</div>
+            <h3>Kasun Harshana Premalal</h3><span class="role">Founder · Lead Developer</span>
+            <p>Builder behind Studio #HASH iNf Lk and Gradia SL.</p>
+          </div>
+          <div class="card">
+            <div class="ico">✦</div>
+            <h3>iNfpirex Team</h3><span class="role">Graphic Designers</span>
+            <p>Your name here — add photo &amp; bio.</p>
+          </div>
+          <div class="card">
+            <div class="ico">⌘</div>
+            <h3>iNfyzora Team</h3><span class="role">Software &amp; Tech</span>
+            <p>Your name here — add photo &amp; bio.</p>
+          </div>
+          <div class="card">
+            <div class="ico">◉</div>
+            <h3>iNframex Team</h3><span class="role">Media</span>
+            <p>Your name here — add photo &amp; bio.</p>
+          </div>
+          <div class="card">
+            <div class="ico">♪</div>
+            <h3>iNfysona Team</h3><span class="role">Music &amp; Audio</span>
+            <p>Your name here — add photo &amp; bio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="eyebrow">Questions</div>
+        <h2>FAQ</h2>
+        <details>
+          <summary>How do I place an order?</summary>
+          <p>Open the Services Hub, choose a sub-brand and press its action button. Your request opens in WhatsApp,
+            pre-filled.</p>
+        </details>
+        <details>
+          <summary>How long does a project take?</summary>
+          <p>It depends on scope. Share your idea and we’ll reply with a clear timeline and quote.</p>
+        </details>
+        <details>
+          <summary>Do you build custom software?</summary>
+          <p>Yes. iNfyzora creates apps for Windows, Android and iOS, plus web tools.</p>
+        </details>
+        <details>
+          <summary>Where are you located?</summary>
+          <p>Cyberspace for now — we work with clients remotely, anywhere.</p>
+        </details>
+        <details>
+          <summary>How can I pay?</summary>
+          <p>Payment details are agreed per project when your quote is confirmed.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap ct">
+        <div class="eyebrow">Transmit a Signal</div>
+        <h2>Contacts</h2>
+        <div class="grid">
+          <a class="card" href="mailto:studio.hashinf.lk@gmail.com"><b>E-mail</b>studio.hashinf.lk@gmail.com</a>
+          <a class="card" href="https://wa.me/94742432804" target="_blank" rel="noopener"><b>WhatsApp</b>+94 74 243
+            2804</a>
+          <a class="card" href="tel:+94742432804"><b>Call</b>+94 74 243 2804<br>+94 72 422 9837</a>
+          <div class="card"><b>Location</b>Cyberspace for Now</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <button data-open="privacy">Privacy &amp; Policy</button><button data-open="terms">Terms &amp; Conditions</button>
+      <p style="opacity:.6;margin:1rem 0 0">© <span id="yr">2026</span> Studio HASH iNf Lk™. All rights reserved. ·
+        iNfpirex™ iNfyzora™ iNframex™ iNfysona™</p>
+    </div>
+  </footer>
+
+  <!-- Services popup -->
+  <div class="pop" id="svc">
+    <div class="sheet">
+      <button class="x" data-close>✕</button>
+      <div class="tabs" id="tabs">
+        <button>iNfpirex</button><button>iNfyzora</button><button>iNframex</button><button>iNfysona</button>
+      </div>
+
+      <div class="panel">
+        <div class="bg p"></div>
+        <div class="ico"><img src="logos/infpirex.svg" alt="" width="56" height="56"></div>
+        <h3 class="grad">iNfpirex<span class='tm-small'>TM</span></h3>
+        <div class="tag">Visualizing the Infinite</div>
+        <p>Graphic services for brands that want to be seen: logos, posters, social kits, UI artwork and full visual
+          identities.</p>
+        <h4 class="eyebrow">Artwork Cabinet</h4>
+        <div class="sub">
+          <div class="tile"><span><b>Logo Design</b>Add artwork</span></div>
+          <div class="tile"><span><b>Posters</b>Add artwork</span></div>
+          <div class="tile"><span><b>Social Kits</b>Add artwork</span></div>
+          <div class="tile"><span><b>Branding</b>Add artwork</span></div>
+        </div>
+        <button class="btn" data-wa="Hello iNfpirex! I would like to place a graphic design order.">Place Your
+          Order</button>
+      </div>
+
+      <div class="panel">
+        <div class="bg y"></div>
+        <div class="ico"><img src="logos/infyzora.svg" alt="" width="56" height="56"></div>
+        <h3 class="grad">iNfyzora<span class='tm-small'>TM</span></h3>
+        <div class="tag">Linking You to Infinity</div>
+        <p>Our software and tech team builds apps, tools and systems — including free, open-source education software
+          for Sri Lankan schools.</p>
+        <h4 class="eyebrow">Software Gallery</h4>
+        <div class="sub">
+          <div class="card" style="grid-column:1/-1">
+            <h3 style="font-size:1.6rem">Gradia SL</h3>
+            <p>Free open-source school marks management app for Sri Lankan schools.</p>
+            <div class="dl"><button class="btn ghost" disabled>⊞ Windows</button><button class="btn ghost" disabled>▶
+                Android</button><button class="btn ghost" disabled>◆ iOS</button></div><small
+              style="opacity:.6">Download links: connect your file URLs here.</small>
+          </div>
+        </div>
+        <textarea id="idea" rows="3" placeholder="Comment your ideas for new software…"></textarea><br><br>
+        <button class="btn" id="ideaBtn">Send Your Idea</button>
+      </div>
+
+      <div class="panel">
+        <div class="bg f"></div>
+        <div class="ico"><img src="logos/inframex.svg" alt="" width="56" height="56"></div>
+        <h3 class="grad">iNframex<span class='tm-small'>TM</span></h3>
+        <div class="tag">Capturing Infinite Moments</div>
+        <p>Photography and videography: events, portraits, product shoots, promos and cinematic edits.</p>
+        <h4 class="eyebrow">Gallery &amp; Video Previewer</h4>
+        <div class="pl" title="Add your video embed/file here">▶</div>
+        <div class="sub">
+          <div class="tile"><span><b>Events</b>Add photo</span></div>
+          <div class="tile"><span><b>Portraits</b>Add photo</span></div>
+          <div class="tile"><span><b>Promos</b>Add video</span></div>
+        </div>
+        <button class="btn" data-wa="Hello iNframex! I would like to book a photo/video session.">Book Now</button>
+      </div>
+
+      <div class="panel">
+        <div class="bg s" id="eq"></div>
+        <div class="ico"><img src="logos/infysona.svg" alt="" width="56" height="56"></div>
+        <h3 class="grad">iNfysona<span class='tm-small'>TM</span></h3>
+        <div class="tag">The Sound of Infinite Emotions</div>
+        <p>Music creation and audio production: composition, arrangement, recording, mixing and mastering.</p>
+        <p style="opacity:.7">Send your stems and we’ll shape them into a release-ready track.</p><br>
+        <button class="btn" data-wa="Hello iNfysona! I would like to place my mixdown.">Place Your Mixdown Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Policy popups -->
+  <div class="pop" id="privacy">
+    <div class="sheet doc"><button class="x" data-close>✕</button>
+      <h3 class="grad">Privacy &amp; Policy</h3>
+      <p>We collect only what you send us (name, contact details, project info) to respond to your request. We never
+        sell your data. Reviews you submit may be displayed publicly. Contact us any time to have your information
+        corrected or removed.</p>
+      <p><em style="opacity:.6">Template text — have it reviewed before launch.</em></p>
+    </div>
+  </div>
+  <div class="pop" id="terms">
+    <div class="sheet doc"><button class="x" data-close>✕</button>
+      <h3 class="grad">Terms &amp; Conditions</h3>
+      <p>Project scope, price and timeline are agreed in writing before work begins. Ownership of final work transfers
+        on full payment. Studio HASH iNf Lk™ and its sub-brand names and logos remain our property. Revisions are
+        limited to those agreed in the quote.</p>
+      <p><em style="opacity:.6">Template text — have it reviewed before launch.</em></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
