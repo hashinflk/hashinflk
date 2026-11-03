@@ -9,8 +9,8 @@ $$("#menu a").forEach(a => a.onclick = () => $("#menu").classList.remove("open")
 const L = ["infpirex", "infyzora", "inframex", "infysona"];
 const B = [["✦", "iNfpirex<span class='tm-small'>TM</span>", "Visualizing the Infinite", "Graphic Services", "Bold visuals, identities and artwork that make your ideas impossible to ignore."],
 ["⌘", "iNfyzora<span class='tm-small'>TM</span>", "Linking You to Infinity", "Software & Tech Team", "Apps, systems and tools engineered for real people and real problems."],
-["◉", "iNframex<span class='tm-small'>TM</span>", "Capturing Infinite Moments", "Photography & Videography", "Cinematic photos and videos that freeze moments into forever."],
-["♪", "iNfysona<span class='tm-small'>TM</span>", "The Sound of Infinite Emotions", "Music Creation & Audio", "Original music, mixing and mastering that carries emotion."]];
+/*["◉", "iNframex<span class='tm-small'>TM</span>", "Capturing Infinite Moments", "Photography & Videography", "Cinematic photos and videos that freeze moments into forever."],
+["♪", "iNfysona<span class='tm-small'>TM</span>", "The Sound of Infinite Emotions", "Music Creation & Audio", "Original music, mixing and mastering that carries emotion."]*/];
 $("#brandGrid").innerHTML = B.map((b, i) => `<div class="card" data-open="svc" data-tab="${i}" style="cursor:pointer"><div class="ico"><img src="logos/${L[i]}.svg" alt="" width="48" height="48"></div><h3 class="grad">${b[1]}</h3><em>${b[2]}</em><p>${b[4]}</p><span class="role">${b[3]}</span></div>`).join("");
 
 // Reviews
