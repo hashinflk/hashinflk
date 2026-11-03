@@ -46,7 +46,7 @@ $("#rvForm").onsubmit = e => {
 };
 
 // Popups
-function openP(id, tab) { $("#" + id).classList.add("on"); document.body.style.overflow = "hidden"; $("#" + id).scrollTop = 0; if (id === "svc") setTab(tab || 0) }
+/*function openP(id, tab) { $("#" + id).classList.add("on"); document.body.style.overflow = "hidden"; $("#" + id).scrollTop = 0; if (id === "svc") setTab(tab || 0) }
 function closeP() { $$(".pop.on").forEach(p => p.classList.remove("on")); document.body.style.overflow = "" }
 document.addEventListener("click", e => {
   const o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); openP(o.dataset.open, +o.dataset.tab || 0) }
@@ -58,7 +58,7 @@ function setTab(i) { $$("#tabs button").forEach((b, k) => b.classList.toggle("on
 $$("#tabs button").forEach((b, i) => b.onclick = () => setTab(i));
 $("#ideaBtn").onclick = () => { const t = $("#idea").value.trim(); if (!t) return toast("Write your idea first"); window.open(`https://wa.me/${WA}?text=${encodeURIComponent("iNfyzora idea: " + t)}`, "_blank", "noopener") };
 $("#eq").innerHTML = Array.from({ length: 40 }, (_, i) => `<i style="animation-delay:${(i * .13 % 1.2).toFixed(2)}s;animation-duration:${(.7 + (i * 37 % 10) / 10).toFixed(2)}s"></i>`).join("");
-
+*/
 // Space background: stars + spiral galaxies
 (() => {
   const c = $("#sky"), x = c.getContext("2d"); let W, H, S = [], G = [], my = 0;
