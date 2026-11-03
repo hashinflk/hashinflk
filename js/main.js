@@ -14,11 +14,11 @@ const B = [["✦", "iNfpirex<span class='tm-small'>TM</span>", "Visualizing the 
 $("#brandGrid").innerHTML = B.map((b, i) => `<div class="card" data-open="svc" data-tab="${i}" style="cursor:pointer"><div class="ico"><img src="logos/${L[i]}.svg" alt="" width="48" height="48"></div><h3 class="grad">${b[1]}</h3><em>${b[2]}</em><p>${b[4]}</p><span class="role">${b[3]}</span></div>`).join("");
 
 // Reviews
-const R = [
+/*const R = [
   ["iNfpirex<span class='tm-small'>TM</span>", "Sample Client", 5, "Sample review — replace with real feedback from your customers."],
   ["iNfyzora<span class='tm-small'>TM</span>", "Sample Client", 5, "Add genuine comments here, or let visitors submit below."],
   ["iNframex<span class='tm-small'>TM</span>", "Sample Client", 4, "Reviews added by visitors appear instantly (until page refresh)."]
-];
+];*/
 
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
